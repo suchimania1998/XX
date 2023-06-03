@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+        <main>
+
+
+            <section class="product-detail section-padding">
+                <div class="container">
+
+                    <div class="row">
+  <div class="col-8"> <div class="product-thumb">
+                                <img src="{{ url_for('video') }}" class="img-fluid rounded mx-auto d-block" alt="Drone"
+                                     style="height:540px;width:800px">
+                            </div></div>
+  <div class="col-4"><div>
+                                    <h2 class="product-title mb-0" style="font-size:25px;">Automate Disease Detection</h2>
+
+                                    <p class="product-p">Some Info if required</p>
+                                </div>
+
+      <button type="button" class="btn btn-dark" onclick="location.href = 'scan-mode.html';">Turn on Scan Mode</button>
+
+
+
+
+                                <p>
+                                    <a href="#" class="product-additional-link">Analytics Result</a>
+
+                                </p></div>
+</div>
+
+
+
+            </section>
+
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Headroom.js"></script>
+        <script src="js/jQuery.headroom.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/custom.js"></script>
+
+
+
+
+
+
+
+
+{% endblock body %}

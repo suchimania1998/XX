@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+        <main>
+
+             <section class="product-detail section-padding">
+                <div class="container">
+
+                    <div class="row">
+  <div class="col-8">
+      <div class="product-thumb">
+                                <img src="{{ url_for('videonormal') }}" class="img-fluid rounded mx-auto d-block" alt="Drone"
+                                     style="height:580px;width:920px">
+                            </div>
+  </div>
+  <div class="col-4">
+      <div>
+                                    <h2 class="product-title mb-0" style="font-size:25px;">Automate Disease Detection</h2>
+
+
+                                </div>
+
+
+
+
+      <button type="submit" class="btn btn-dark" onclick="location.href = 'takeimage';">Scan</button>
+      <button type="submit" class="btn btn-dark" onclick="location.href = 'product-detail.html';">Return to Detection Page</button>
+
+
+
+
+                                <p>
+                                    <a href="product-detail.html" class="product-additional-link">Return to Detection Page</a>
+
+                                </p>
+  </div>
+</div>
+
+                </div>
+
+            </section>
+
+
+            <section class="product-detail section-padding">
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+     <div class="product-thumb">
+
+                                <img src="{{ url_for('static',filename=path) }}">
+     </div>
+    </div>
+    <div class="col">
+ <div class="col-lg-6 col-12">
+
+
+                            <div class="product-description">
+
+                                <strong class="d-block mt-4 mb-2" style="font-size:25px;">Results</strong>
+
+                                <p class="product-p">{{ prediction_text }}</p>
+                                <p class="product-p">{{ Medi }}</p>
+                                <p id="lng" class="product-p">{{ lng }}</p>
+                                <p id="lat" class="product-p">{{ lat }}</p>
+                                <p class="product-p">{{ maptext }}</p>
+
+                                <a class="product-p" href="{{ map }}">{{ map }}</a>
+                            </div>
+
+                        </div>
+    </div>
+  </div>
+</div>
+
+
+                
+
+
+            </section>
+
+
+
+
+        </main>
+
+
+
+        <!-- JAVASCRIPT FILES -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/Headroom.js"></script>
+        <script src="js/jQuery.headroom.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/custom.js"></script>
+
+
+
+
+{% endblock body %}
